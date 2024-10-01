@@ -5,7 +5,7 @@ Aplikasi ini adalah proyek pembelajaran berbasis Flutter yang dibuat untuk memen
 ## Fitur Aplikasi
 
 1. **Halaman Utama**:
-   - Menampilkan greeting yang personal (contoh: "Good morning, Kevin Juliette 👋").
+   - Menampilkan greeting yang personal.
    - Menampilkan kursus yang sedang berjalan dengan informasi progres yang terlihat dalam bentuk kartu.
 
 2. **Navigasi Antar Materi**:
