@@ -1,3 +1,4 @@
+import 'package:demoprak2/app/modules/course/views/course_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/home_controller.dart';
@@ -247,7 +248,20 @@ class HomeView extends GetView<HomeController> {
       mainAxisSize: MainAxisSize.min,
       children: [
         InkWell(
-          onTap: () {},
+          onTap: () {
+            // Lakukan navigasi ke page berbeda berdasarkan label
+            if (label == 'Coding') {
+              Get.to(() => CourseView());
+            } else if (label == 'Business') {
+              //Get.to(() => BusinessPage());
+            } else if (label == 'Math') {
+              //Get.to(() => MathPage());
+            } else if (label == 'Arts') {
+              //Get.to(() => ArtsPage());
+            }
+            // Tambahkan navigasi ke page lain sesuai kebutuhan
+
+          },
           customBorder: const CircleBorder(),
           child: Container(
             padding: const EdgeInsets.all(15),
