@@ -249,7 +249,7 @@ class HomeView extends GetView<HomeController> {
         InkWell(
           onTap: () {
             // Lakukan navigasi ke page berbeda berdasarkan label
-            if (label == 'Coding') {
+            if (label == 'Music') {
               Get.to(() => CourseView());
             } else if (label == 'Business') {
               //Get.to(() => BusinessPage());
