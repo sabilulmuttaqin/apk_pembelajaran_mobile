@@ -22,7 +22,7 @@ class CourseView extends StatelessWidget {
                   decoration: BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage(
-                        'Assets/Images/piano.jpeg', // Gambar dari assets
+                        'assets/images/piano.jpeg', // Gambar dari assets
                       ),
                       fit: BoxFit.cover,
                     ),
@@ -86,7 +86,7 @@ class CourseView extends StatelessWidget {
                     children: [
                       CircleAvatar(
                         backgroundImage: AssetImage(
-                          'Assets/Images/author_avatar.png', // Gambar avatar dari assets
+                          'assets/images/author_avatar.png', // Gambar avatar dari assets
                         ),
                       ),
                       SizedBox(width: 8),
