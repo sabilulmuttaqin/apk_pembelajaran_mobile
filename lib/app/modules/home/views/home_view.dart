@@ -1,4 +1,3 @@
-import 'package:demoprak2/app/modules/course/views/course_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/home_controller.dart';
