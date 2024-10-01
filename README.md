@@ -1,6 +1,6 @@
-# prak1
+# Modul 1
 
-A new Flutter project.
+Aplikasi ini dibuat sebagai tugas modul 1 praktikum Pemograman Mobile.
 
 ## Getting Started
 
