@@ -131,7 +131,7 @@ class HomeView extends GetView<HomeController> {
           child: const Text(
             'Ongoing',
             style: TextStyle(
-              color: const Color.fromARGB(255, 17, 31, 44),
+              color: Color.fromARGB(255, 17, 31, 44),
               fontSize: 12,
             ),
           ),
@@ -253,15 +253,16 @@ class HomeView extends GetView<HomeController> {
       children: [
         InkWell(
           onTap: () {
-            if (label == 'Coding') {
-              Get.to(() => {});
-            } else if (label == 'Business') {
-              Get.to(() => {}); // Replace with actual page
-            } else if (label == 'Math') {
-              Get.to(() => {}); // Replace with actual page
-            } else if (label == 'Arts') {
-              Get.to(() => {}); // Replace with actual page
-            } else if (label == 'Music') {
+            // if (label == 'Coding') {
+            //   Get.to(() => {});
+            // } else if (label == 'Business') {
+            //   Get.to(() => {});
+            // } else if (label == 'Math') {
+            //   Get.to(() => {});
+            // } else if (label == 'Arts') {
+            //   Get.to(() => {});
+            // } else
+            if (label == 'Music') {
               Get.to(() => CourseView());
             }
             // Tambahkan navigasi ke page lain sesuai kebutuhan
@@ -407,8 +408,8 @@ class HomeView extends GetView<HomeController> {
           label: 'Home',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.list),
-          label: 'Courses',
+          icon: Icon(Icons.history),
+          label: 'History',
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.person),
