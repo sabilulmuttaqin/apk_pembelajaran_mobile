@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:prak1/app/modules/course/views/course_view.dart';
 import '../controllers/home_controller.dart';
+import '/app/modules/profile/views/profile_view.dart';
 
 class HomeView extends GetView<HomeController> {
   const HomeView({super.key});
@@ -248,18 +250,18 @@ class HomeView extends GetView<HomeController> {
       children: [
         InkWell(
           onTap: () {
-            // Lakukan navigasi ke page berbeda berdasarkan label
-            if (label == 'Music') {
-              Get.to(() => CourseView());
+            if (label == 'Coding') {
+              Get.to(() => {});
             } else if (label == 'Business') {
-              //Get.to(() => BusinessPage());
+              Get.to(() => {}); // Replace with actual page
             } else if (label == 'Math') {
-              //Get.to(() => MathPage());
+              Get.to(() => {}); // Replace with actual page
             } else if (label == 'Arts') {
-              //Get.to(() => ArtsPage());
+              Get.to(() => {}); // Replace with actual page
+            } else if (label == 'Music') {
+              Get.to(() => CourseView());
             }
             // Tambahkan navigasi ke page lain sesuai kebutuhan
-
           },
           customBorder: const CircleBorder(),
           child: Container(
@@ -398,17 +400,25 @@ class HomeView extends GetView<HomeController> {
           label: 'Home',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.favorite),
-          label: 'Favorites',
+          icon: Icon(Icons.list),
+          label: 'Courses',
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.person),
           label: 'Profile',
         ),
       ],
-      selectedItemColor: const Color(0xFF4569FA),
-      unselectedItemColor: Colors.grey,
-      showUnselectedLabels: true,
+      onTap: (index) {
+        // Navigasi menggunakan if-else
+        if (index == 0) {
+          Get.to(() => HomeView());
+        } else if (index == 1) {
+          Get.to(() => CourseView());
+        } else if (index == 2) {
+          Get.to(
+              () => ProfileView()); 
+        }
+      },
     );
   }
 }
