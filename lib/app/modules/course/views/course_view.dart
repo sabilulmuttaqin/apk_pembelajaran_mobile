@@ -18,7 +18,8 @@ class CourseView extends StatelessWidget {
             Stack(
               children: [
                 Container(
-                  height: MediaQuery.of(context).size.height * 0.4, // Menetapkan tinggi header
+                  height: MediaQuery.of(context).size.height *
+                      0.4, // Menetapkan tinggi header
                   decoration: BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage(
@@ -36,9 +37,13 @@ class CourseView extends StatelessWidget {
                       shape: BoxShape.circle,
                       color: Colors.white, // Warna background lingkaran
                     ),
-                    padding: EdgeInsets.all(1), // Padding untuk ruang di sekitar ikon
+                    padding: EdgeInsets.all(
+                        1), // Padding untuk ruang di sekitar ikon
                     child: IconButton(
-                      icon: Icon(Icons.arrow_back, color: Color(0xFF4A6DFA)), // Warna ikon menjadi 4A6DFA
+                      icon: Icon(
+                        Icons.arrow_back,
+                        color: Color.fromARGB(255, 17, 31, 44),
+                      ), // Warna ikon menjadi 4A6DFA
                       onPressed: () {
                         Get.back();
                       },
@@ -72,9 +77,11 @@ class CourseView extends StatelessWidget {
                             width: 2, // Ketebalan garis lingkaran
                           ),
                         ),
-                        padding: EdgeInsets.all(8), // Padding untuk memberikan ruang di sekitar ikon
+                        padding: EdgeInsets.all(
+                            8), // Padding untuk memberikan ruang di sekitar ikon
                         child: Icon(
-                          Icons.bookmark_border, // Menggunakan ikon bookmark outline
+                          Icons
+                              .bookmark_border, // Menggunakan ikon bookmark outline
                           color: Colors.black, // Warna garis luar menjadi hitam
                         ),
                       ),
@@ -106,16 +113,21 @@ class CourseView extends StatelessWidget {
                               ),
                               SizedBox(width: 8), // Jarak antara nama dan Music
                               Container(
-                                padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4), // Padding di dalam kotak
+                                padding: EdgeInsets.symmetric(
+                                    horizontal: 8,
+                                    vertical: 4), // Padding di dalam kotak
                                 decoration: BoxDecoration(
-                                  color: Color(0xFFF3E6F7), // Warna background kotak
-                                  borderRadius: BorderRadius.circular(4), // Corner radius 8
+                                  color: Color(
+                                      0xFFF3E6F7), // Warna background kotak
+                                  borderRadius: BorderRadius.circular(
+                                      4), // Corner radius 8
                                 ),
                                 child: Text(
                                   'Music',
                                   style: TextStyle(
                                     fontSize: 14,
-                                    color: Color(0xFFFA58F0), // Warna teks Music
+                                    color:
+                                        Color(0xFFFA58F0), // Warna teks Music
                                   ),
                                 ),
                               ),
@@ -135,11 +147,15 @@ class CourseView extends StatelessWidget {
                         padding: EdgeInsets.all(16),
                         decoration: BoxDecoration(
                           color: Colors.white, // Background putih
-                          borderRadius: BorderRadius.circular(20), // Corner radius 20
+                          borderRadius:
+                              BorderRadius.circular(20), // Corner radius 20
                         ),
                         child: Row(
                           children: [
-                            Icon(Icons.edit_calendar_outlined, color: Color(0xFF4A6DFA)), // Warna ikon
+                            Icon(
+                              Icons.edit_calendar_outlined,
+                              color: Color.fromARGB(255, 17, 31, 44),
+                            ), // Warna ikon
                             SizedBox(width: 8), // Jarak antara ikon dan teks
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -169,11 +185,15 @@ class CourseView extends StatelessWidget {
                         padding: EdgeInsets.all(16),
                         decoration: BoxDecoration(
                           color: Colors.white, // Background putih
-                          borderRadius: BorderRadius.circular(20), // Corner radius 20
+                          borderRadius:
+                              BorderRadius.circular(20), // Corner radius 20
                         ),
                         child: Row(
                           children: [
-                            Icon(Icons.people_outlined, color: Color(0xFF4A6DFA)), // Warna ikon
+                            Icon(
+                              Icons.people_outlined,
+                              color: Color.fromARGB(255, 17, 31, 44),
+                            ), // Warna ikon
                             SizedBox(width: 8), // Jarak antara ikon dan teks
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -212,13 +232,12 @@ class CourseView extends StatelessWidget {
                   SizedBox(height: 8),
                   Text(
                     'Dive Deep into the Fundamentals of Design Principles, '
-                        'Master the Latest Tools and Techniques, and Gain Insightful '
-                        'Industry Perspectives from Seasoned Professionals.',
+                    'Master the Latest Tools and Techniques, and Gain Insightful '
+                    'Industry Perspectives from Seasoned Professionals.',
                     style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.normal,
-                        color: Color(0xFFA4A4A4)
-                    ),
+                        color: Color(0xFFA4A4A4)),
                   ),
                   SizedBox(height: 40),
                   // Course sections
@@ -233,18 +252,24 @@ class CourseView extends StatelessWidget {
                           color: Colors.black,
                         ),
                       ),
-                      SizedBox(width: 8), // Jarak antara "Courses" dan jumlah sections
+                      SizedBox(
+                          width:
+                              8), // Jarak antara "Courses" dan jumlah sections
                       Text(
                         '(12 sections ~ 7 hours 34 minutes)', // Teks yang diletakkan di samping "Courses"
                         style: TextStyle(
                           fontSize: 14, // Ukuran teks diubah menjadi 14
-                          color: Color(0xFFA4A4A4), // Warna teks diubah menjadi #A4A4A4
+                          color: Color(
+                              0xFFA4A4A4), // Warna teks diubah menjadi #A4A4A4
                         ),
                       ),
                     ],
                   ),
                   ListTile(
-                    leading: Text('01.', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)), // Menjaga penomoran
+                    leading: Text('01.',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16)), // Menjaga penomoran
                     title: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -267,17 +292,27 @@ class CourseView extends StatelessWidget {
                       ],
                     ),
                     trailing: Row(
-                      mainAxisSize: MainAxisSize.min, // Menghindari pemborosan ruang
+                      mainAxisSize:
+                          MainAxisSize.min, // Menghindari pemborosan ruang
                       children: [
                         Row(
                           children: [
-                            Icon(Icons.remove_red_eye_outlined, size: 20, color: Color(0xFFA4A4A4)), // Mengubah warna ikon play
+                            Icon(Icons.remove_red_eye_outlined,
+                                size: 20,
+                                color: Color(
+                                    0xFFA4A4A4)), // Mengubah warna ikon play
                             SizedBox(width: 4),
-                            Text('327', style: TextStyle(color: Color(0xFFA4A4A4), fontSize: 14)), // Warna teks 327 juga diubah
+                            Text('327',
+                                style: TextStyle(
+                                    color: Color(0xFFA4A4A4),
+                                    fontSize:
+                                        14)), // Warna teks 327 juga diubah
                           ],
                         ),
                         SizedBox(width: 60), // Jarak antara play dan lock icon
-                        Icon(Icons.lock_outline, color: Color(0xFFA4A4A4)), // Mengubah warna ikon lock
+                        Icon(Icons.lock_outline,
+                            color:
+                                Color(0xFFA4A4A4)), // Mengubah warna ikon lock
                       ],
                     ),
                   ),
@@ -308,12 +343,15 @@ class CourseView extends StatelessWidget {
                       ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.indigoAccent,
+                          backgroundColor: Color.fromARGB(255, 17, 31, 44),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(24),
                           ),
                         ),
-                        child: Text('Buy Course', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500)),
+                        child: Text('Buy Course',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500)),
                       ),
                     ],
                   ),
@@ -326,4 +364,3 @@ class CourseView extends StatelessWidget {
     );
   }
 }
-
