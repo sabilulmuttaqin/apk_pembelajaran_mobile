@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import '/app/modules/course/views/course_view.dart';
 import '../controllers/home_controller.dart';
 import '/app/modules/profile/views/profile_view.dart';
+import '/app/modules/history/views/history_view.dart';
 
 class HomeView extends GetView<HomeController> {
   const HomeView({super.key});
@@ -21,7 +22,7 @@ class HomeView extends GetView<HomeController> {
       preferredSize: const Size.fromHeight(250),
       child: AppBar(
         automaticallyImplyLeading: false,
-        backgroundColor: const Color(0xFF4569FA),
+        backgroundColor: const Color.fromARGB(255, 17, 31, 44),
         elevation: 0,
         flexibleSpace: Stack(
           children: [
@@ -70,7 +71,7 @@ class HomeView extends GetView<HomeController> {
               backgroundColor: Colors.white,
               child: Icon(
                 Icons.notifications,
-                color: Color(0xFF4569FA),
+                color: const Color.fromARGB(255, 17, 31, 44),
               ),
             ),
           ],
@@ -130,7 +131,7 @@ class HomeView extends GetView<HomeController> {
           child: const Text(
             'Ongoing',
             style: TextStyle(
-              color: Color(0xFF4569FA),
+              color: const Color.fromARGB(255, 17, 31, 44),
               fontSize: 12,
             ),
           ),
@@ -166,7 +167,9 @@ class HomeView extends GetView<HomeController> {
           child: CircularProgressIndicator(
             value: 0.73,
             strokeWidth: 6,
-            valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFF4569FA)),
+            valueColor: const AlwaysStoppedAnimation<Color>(
+              Color.fromARGB(255, 17, 31, 44),
+            ),
             backgroundColor: Colors.grey[300],
           ),
         ),
@@ -278,7 +281,11 @@ class HomeView extends GetView<HomeController> {
                 ),
               ],
             ),
-            child: Icon(icon, size: 30, color: const Color(0xFF4569FA)),
+            child: Icon(
+              icon,
+              size: 30,
+              color: Color.fromARGB(255, 17, 31, 44),
+            ),
           ),
         ),
         const SizedBox(height: 5),
@@ -360,7 +367,7 @@ class HomeView extends GetView<HomeController> {
                   category,
                   style: TextStyle(
                     fontSize: 12,
-                    color: Colors.blue[300],
+                    color: const Color.fromARGB(255, 17, 31, 44),
                   ),
                 ),
                 Text(
@@ -413,10 +420,9 @@ class HomeView extends GetView<HomeController> {
         if (index == 0) {
           Get.to(() => HomeView());
         } else if (index == 1) {
-          Get.to(() => CourseView());
+          Get.to(() => HistoryView());
         } else if (index == 2) {
-          Get.to(
-              () => ProfileView()); 
+          Get.to(() => ProfileView());
         }
       },
     );
