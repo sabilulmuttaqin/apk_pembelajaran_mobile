@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import '../modules/course/views/course_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/profile/views/profile_view.dart';
 
 part 'app_routes.dart';
 
@@ -17,6 +18,7 @@ class AppPages {
       page: () => const HomeView(),
       binding: HomeBinding(),
     ),
-    GetPage(name: _Paths.COURSE, page: ()=> CourseView())
+    GetPage(name: _Paths.COURSE, page: () => CourseView()),
+    GetPage(name: _Paths.PROFILE, page: () => ProfileView())
   ];
 }
