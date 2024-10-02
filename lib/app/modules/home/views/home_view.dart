@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:prak1/app/modules/course/views/course_view.dart';
+import '/app/modules/course/views/course_view.dart';
 import '../controllers/home_controller.dart';
 import '/app/modules/profile/views/profile_view.dart';
 
